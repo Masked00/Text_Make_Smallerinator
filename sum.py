@@ -3,6 +3,7 @@ import math
 from nltk import sent_tokenize, word_tokenize, PorterStemmer
 from nltk.corpus import stopwords
 import os
+import matplotlib.pyplot as plt
 
 os.chdir(os.path.dirname(__file__))
 
@@ -39,6 +40,10 @@ def _create_frequency_matrix(sentences):
 
         frequency_matrix[sent[:15]] = freq_table
 
+    #names = list(freq_table.keys())
+    #values = list(freq_table.values())
+    #plt.bar(range(len(freq_table)), values, tick_label=names)
+    # plt.show()
     return frequency_matrix
 
 
